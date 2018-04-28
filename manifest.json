@@ -1,0 +1,33 @@
+{
+    "manifest_version" : 2,
+    "name" : "Child Monitor",
+    "version" : "1.0",
+    "description" : "Only for parents",
+    "icons":{
+        "128":"ico128.png"
+    },
+
+    "browser_action":{
+        "default_icon":"ico128.png",
+        "default_popup":"popup.html",
+        "default_title":"child monitor"
+    },
+
+    "permissions":[
+        "storage"
+    ],
+
+    "content_scripts":[{
+
+        "matches":["<all_urls>"],
+
+        "js":[
+            "jquery-3.1.0.min.js",
+            "popup.js"
+
+        ]
+    }
+
+
+    ]
+}
